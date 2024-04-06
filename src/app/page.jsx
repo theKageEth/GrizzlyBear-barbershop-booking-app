@@ -1,6 +1,16 @@
-import ThemeSwitcher from "@/components/toggle/ThemeSwitcher";
-import { Button } from "@nextui-org/button";
+import Contact from "@/components/home/Contact";
+import Hero from "@/components/home/Hero";
+import Opening from "@/components/home/Opening";
+import Services from "@/components/home/Services";
 
 export default function Home() {
-  return <></>;
+  return (
+    <>
+      <Hero />
+      <Opening />
+
+      <Services />
+      <Contact />
+    </>
+  );
 }
