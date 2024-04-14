@@ -1,15 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Link from "next/link";
 import {
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
-  Button,
 } from "@nextui-org/react";
 import Image from "next/image";
+import ThemeSwitcher from "../toggle/ThemeSwitcher";
 
 const NavbarComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,8 +17,19 @@ const NavbarComponent = () => {
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsOpen(false);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <Navbar>
+    <Navbar className="bg-primary ">
       <NavbarContent>
         <div className="relative sm:hidden mr-3" onClick={handleClick}>
           <div className="w-6 h-6 relative">
@@ -58,52 +69,83 @@ const NavbarComponent = () => {
             </svg>
           </div>
         </div>
-        <NavbarBrand>
-          <Image src="/logo.png" width={30} height={30} />
-          <p className="font-bold text-inherit m-3">GrizzlyBeard</p>
-        </NavbarBrand>
+        <Link
+          className="hover:scale-125 transition duration-300 ease-in-out"
+          href="/"
+          onClick={() => setIsOpen(false)}
+        >
+          <NavbarBrand>
+            <Image src="/logo.png" width={30} height={30} />
+            <p className="font-bold  m-3">GrizzlyBeard</p>
+          </NavbarBrand>
+        </Link>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex gap-4 " justify="center">
         <NavbarItem>
-          <Link color="foreground" href="/#hero">
+          <Link
+            className=" hover:font-bold hover:underline hover:text-secondary"
+            href="/"
+          >
             Home
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="/#opening" aria-current="page">
+          <Link
+            className=" hover:font-bold hover:underline hover:text-secondary"
+            href="/#opening"
+            aria-current="page"
+          >
             Opening Times
           </Link>
         </NavbarItem>
 
         <NavbarItem>
-          <Link color="foreground" href="/#services">
+          <Link
+            className=" hover:font-bold hover:underline hover:text-secondary"
+            href="/#services"
+          >
             Services
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="/#contact">
+          <Link
+            className=" hover:font-bold hover:underline hover:text-secondary"
+            href="/#contact"
+          >
             Contact
           </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
+        <NavbarItem className="">
+          <ThemeSwitcher />
+        </NavbarItem>
         <NavbarItem className="hidden lg:flex">
-          <Link href="/login">Login</Link>
+          <Link
+            className=" hover:font-bold hover:underline hover:text-secondary"
+            href="/login"
+          >
+            Login
+          </Link>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="/register" variant="flat">
-            Sign Up
-          </Button>
+          <Link
+            className=" hover:font-bold hover:underline hover:text-secondary"
+            href="/register"
+            onClick={() => setIsOpen(false)}
+          >
+            Register
+          </Link>
         </NavbarItem>
       </NavbarContent>
       <div className={`absolute top-14 left-0 ${isOpen ? "block" : "hidden"}`}>
-        <div className="bg-primary shadow-md rounded-md p-4 space-y-3">
+        <div className="bg-primary shadow-md rounded-md p-4 space-y-3 border-b-2 border-r-2  border-t-2 border-secondary">
           <div>
             <Link
               className="hover:underline hover:text-secondary "
               color="foreground"
-              href="/#hero"
+              href="/"
               onClick={() => setIsOpen(false)}
             >
               Home

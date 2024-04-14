@@ -1,8 +1,8 @@
 const Hero = () => {
   return (
-    <div id="hero" className="h-screen bg-blue-200">
-      Hero
-    </div>
+    <>
+      <div id="hero" className="h-screen bg-blue-200 z-30 "></div>
+    </>
   );
 };
 

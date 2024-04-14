@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark bg-background">
       <body className={inter.className}>
         <UIProvider>
           <NavbarComponent />
