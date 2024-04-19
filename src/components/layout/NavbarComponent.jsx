@@ -29,7 +29,7 @@ const NavbarComponent = () => {
   }, []);
 
   return (
-    <Navbar className="bg-primary ">
+    <Navbar className="bg-primary fixed top-0 w-screen  bg-opacity-50 ">
       <NavbarContent>
         <div className="relative sm:hidden mr-3" onClick={handleClick}>
           <div className="w-6 h-6 relative">
@@ -75,7 +75,12 @@ const NavbarComponent = () => {
           onClick={() => setIsOpen(false)}
         >
           <NavbarBrand>
-            <Image src="/logo.png" width={30} height={30} />
+            <Image
+              src="/logo.png"
+              width={30}
+              height={30}
+              alt="logo brand GrizzlyBeard"
+            />
             <p className="font-bold  m-3">GrizzlyBeard</p>
           </NavbarBrand>
         </Link>
@@ -84,7 +89,7 @@ const NavbarComponent = () => {
       <NavbarContent className="hidden sm:flex gap-4 " justify="center">
         <NavbarItem>
           <Link
-            className=" hover:font-bold hover:underline hover:text-secondary"
+            className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-secondary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
             href="/"
           >
             Home
@@ -92,7 +97,7 @@ const NavbarComponent = () => {
         </NavbarItem>
         <NavbarItem>
           <Link
-            className=" hover:font-bold hover:underline hover:text-secondary"
+            className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-secondary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
             href="/#opening"
             aria-current="page"
           >
@@ -102,7 +107,7 @@ const NavbarComponent = () => {
 
         <NavbarItem>
           <Link
-            className=" hover:font-bold hover:underline hover:text-secondary"
+            className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-secondary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
             href="/#services"
           >
             Services
@@ -110,7 +115,7 @@ const NavbarComponent = () => {
         </NavbarItem>
         <NavbarItem>
           <Link
-            className=" hover:font-bold hover:underline hover:text-secondary"
+            className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-secondary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
             href="/#contact"
           >
             Contact
@@ -118,20 +123,20 @@ const NavbarComponent = () => {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem className="">
+        <NavbarItem className=" pl-2">
           <ThemeSwitcher />
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">
           <Link
-            className=" hover:font-bold hover:underline hover:text-secondary"
+            className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-secondary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
             href="/login"
           >
             Login
           </Link>
         </NavbarItem>
-        <NavbarItem>
+        <NavbarItem className="pr-5 ">
           <Link
-            className=" hover:font-bold hover:underline hover:text-secondary"
+            className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-secondary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
             href="/register"
             onClick={() => setIsOpen(false)}
           >
@@ -143,7 +148,7 @@ const NavbarComponent = () => {
         <div className="bg-primary shadow-md rounded-md p-4 space-y-3 border-b-2 border-r-2  border-t-2 border-secondary">
           <div>
             <Link
-              className="hover:underline hover:text-secondary "
+              className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-secondary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
               color="foreground"
               href="/"
               onClick={() => setIsOpen(false)}
@@ -153,7 +158,7 @@ const NavbarComponent = () => {
           </div>
           <div>
             <Link
-              className="hover:underline hover:text-secondary "
+              className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-secondary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
               color="foreground"
               href="/#opening"
               onClick={() => setIsOpen(false)}
@@ -163,7 +168,7 @@ const NavbarComponent = () => {
           </div>
           <div>
             <Link
-              className="hover:underline hover:text-secondary "
+              className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-secondary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
               color="foreground"
               href="/#services"
               onClick={() => setIsOpen(false)}
@@ -173,7 +178,7 @@ const NavbarComponent = () => {
           </div>
           <div>
             <Link
-              className="hover:underline hover:text-secondary "
+              className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-secondary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
               color="foreground"
               href="/#contact"
               onClick={() => setIsOpen(false)}

@@ -50,24 +50,24 @@ const ParticlesBackrgound = ({ children }) => {
                 quantity: 4,
               },
               repulse: {
-                distance: 200,
+                distance: 80,
                 duration: 0.4,
               },
             },
           },
           particles: {
             color: {
-              value: "#ffffff",
+              value: "#E8BD17",
             },
             links: {
               color: "#ffffff",
               distance: 150,
-              enable: true,
+              enable: false,
               opacity: 0.5,
               width: 1,
             },
             move: {
-              direction: "none",
+              direction: "outside",
               enable: true,
               outModes: {
                 default: "bounce",
@@ -84,13 +84,13 @@ const ParticlesBackrgound = ({ children }) => {
               value: 80,
             },
             opacity: {
-              value: 0.5,
+              value: 0.4,
             },
             shape: {
-              type: "star",
+              type: "circle",
             },
             size: {
-              value: { min: 1, max: 5 },
+              value: { min: 0.3, max: 5 },
             },
           },
           detectRetina: true,

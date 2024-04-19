@@ -14,12 +14,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark bg-background">
+    <html lang="en" className="dark ">
       <body className={inter.className}>
         <UIProvider>
           <NavbarComponent />
           {children}
-          <Footer />
+          <Footer className="" />
         </UIProvider>
       </body>
     </html>
