@@ -37,8 +37,7 @@ const Contact = () => {
               Hi {name}!
             </h3>
             <p className="mb-5 p-2">
-              {" "}
-              We'd love to hear from you! Please fill out the form below
+              We&apos;d love to hear from you! Please fill out the form below
             </p>
             <Input
               type="text"
