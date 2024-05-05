@@ -28,17 +28,17 @@ const Contact = () => {
         </h2>
         <div className=" ">
           <form
-            className="flex flex-col gap-4 bg-primary bg-opacity-30 backdrop-filter backdrop-blur-3xl p-6 rounded-xl "
+            className="flex flex-col gap-4 bg-primary bg-opacity-30 backdrop-filter backdrop-blur-3xl px-4 rounded-xl mx-2"
             action=""
             method="post"
             enctype="text/plain"
           >
+            <p className="mt-3 p-2 font-bold text-center bg-gradient-to-br from-content to-secondary bg-clip-text text-transparent">
+              We&apos;d love to hear from you! Please fill out the form below
+            </p>
             <h3 className="text-xl p-5 font-bold  text-center bg-gradient-to-br from-content to-secondary bg-clip-text text-transparent">
               Hi {name}!
             </h3>
-            <p className="mb-5 p-2">
-              We&apos;d love to hear from you! Please fill out the form below
-            </p>
             <Input
               type="text"
               label="name"
@@ -48,6 +48,7 @@ const Contact = () => {
               radius="full"
               labelPlacement="inside"
               onValueChange={setName}
+              maxLength={30}
             />
             <Input
               type="email"
