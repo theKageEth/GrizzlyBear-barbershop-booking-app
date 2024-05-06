@@ -1,4 +1,3 @@
-import AdminUsers from "@/components/cards/AdminUsers";
 import SingleBooking from "@/components/cards/SingleBooking";
 import BookingForm from "@/components/forms/BookingForm";
 import ParticlesAdmin from "@/components/home/ParticlesAdmin";

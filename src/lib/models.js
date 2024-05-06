@@ -44,9 +44,8 @@ const postSchema = new mongoose.Schema(
       required: true,
     },
     slug: {
-      type: Date,
+      type: String,
       required: true,
-      unique: true,
     },
   },
   { timestamps: true }

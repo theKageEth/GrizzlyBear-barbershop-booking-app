@@ -27,7 +27,7 @@ const BookingForm = ({ userId }) => {
           </h3>
           <input type="hidden" name="userId" value={userId} />
 
-          <select name="title">
+          <select name="title" defaultValue="">
             <option value="" disabled selected>
               Select a service
             </option>
@@ -43,10 +43,11 @@ const BookingForm = ({ userId }) => {
             placeholder="Date"
             min={getCurrentDate()}
           />
-          <select name="slug" placeholder="Time">
+          <select name="slug" defaultValue="">
             <option value="" disabled selected>
-              Select Time
+              Select a Time
             </option>
+
             <option value="09:00">9:00 AM</option>
             <option value="09:30">9:30 AM</option>
             <option value="10:00">10:00 AM</option>
