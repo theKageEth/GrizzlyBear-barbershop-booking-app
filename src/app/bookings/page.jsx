@@ -8,6 +8,7 @@ const BookingPage = async () => {
 
   return (
     <div className="flex flex-col justify-center items-center mt-32">
+      <h1 className="text-3xl font-bold my-8 ">{session.user.email}</h1>
       <BookingForm userId={session.user.id} />
 
       <h1 className="text-3xl font-bold my-8">Bookings</h1>

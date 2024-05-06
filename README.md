@@ -1,3 +1,6 @@
+it is deployed here too
+https://grizzly-bear-barbershop-booking-app.vercel.app/
+
 First Install packages
 
 ```bash
@@ -29,3 +32,5 @@ password: 123456
 non admin or create your own
 username:notadmin
 password: 12345678
+
+if there is bug when creating booking please delete .next folder and run npm run dev again
