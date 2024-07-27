@@ -31,7 +31,7 @@ const NavbarComponent = () => {
   return (
     <Navbar className="bg-primary fixed top-0 w-screen  bg-opacity-50 ">
       <NavbarContent>
-        <div className="relative lg:hidden mr-3" onClick={handleClick}>
+        <div className="relative lg:hidden " onClick={handleClick}>
           <div className="w-6 h-6 relative">
             {/* Icon when closed */}
             <svg
@@ -81,12 +81,12 @@ const NavbarComponent = () => {
               height={30}
               alt="logo brand GrizzlyBeard"
             />
-            <p className="font-bold  m-3">GrizzlyBeard</p>
+            <p className="font-bold mx-1 px-2">Beard</p>
           </NavbarBrand>
         </Link>
       </NavbarContent>
 
-      <NavbarContent className="hidden lg:flex gap-3 " justify="start">
+      <NavbarContent className="hidden lg:flex  " justify="center">
         <NavbarItem>
           <Link
             className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-secondary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
@@ -138,15 +138,17 @@ const NavbarComponent = () => {
           </Link>
         </NavbarItem>
       </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem className="  flex flex-row gap-2">
+      <NavbarContent className=" relative">
+        <NavbarItem className=" absolute right-20">
           <ThemeSwitcher />
         </NavbarItem>
-
-        <NavbarItem className="pr-5 "></NavbarItem>
       </NavbarContent>
-      <div className={`absolute top-14 left-0 ${isOpen ? "block" : "hidden"}`}>
-        <div className="bg-primary shadow-md rounded-md p-4 space-y-3 border-b-2 border-r-2  border-t-2 border-secondary">
+      <div
+        className={`absolute rounded-2xl bg-primary bg-opacity-90 top-14 left-1 ${
+          isOpen ? "block" : "hidden"
+        } `}
+      >
+        <div className=" shadow-md rounded-2xl p-4 space-y-3 border-2 border-secondary">
           <div>
             <Link
               className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-secondary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"

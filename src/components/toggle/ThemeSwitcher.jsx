@@ -22,7 +22,7 @@ export default function ThemeSwitcher() {
   return (
     <Switch
       defaultSelected={theme === "dark"}
-      size="lg"
+      size="sm"
       color="secondary"
       onChange={toggleTheme}
       thumbIcon={({ isSelected, className }) =>

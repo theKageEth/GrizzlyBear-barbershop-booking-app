@@ -17,10 +17,12 @@ export default function RootLayout({ children }) {
     <html lang="en" className="dark ">
       <body className={inter.className}>
         <UIProvider>
-          <NavbarComponent />
-          <SessionBut />
-          {children}
-          <Footer className="" />
+          <div className=" relative overflow-x-hidden">
+            <NavbarComponent />
+            <SessionBut />
+            {children}
+            <Footer className="" />
+          </div>
         </UIProvider>
       </body>
     </html>
